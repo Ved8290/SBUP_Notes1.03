@@ -136,13 +136,13 @@ var tbody =document.getElementById('tbody1');
       tbody.innerHTML="";
 
     student.forEach(element =>{
-      AddItemsToTable(element.C,element.Ch,element.D ,element.Down);
+      AddItemsToTable(element.Ch_No,element.Ch_na,element.Des ,element.link);
     });
 
   }
 
 
-
+ 
 
 
 
@@ -209,7 +209,7 @@ const db = getDatabase();
 
 
     function rtim(){
-      const dbRef =ref(db , "sub/sub41");
+      const dbRef =ref(db , "sub/sub401");
       onValue(dbRef,(snapshot)=>{
         var student=[];
         snapshot.forEach(childsnapshot=>{
