@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content=" SBUP Notes Unofficial platform for Notes , Lets study and crack it ."
+    />
+    <meta
+      name="keywords"
+      content="SBUP , sbup, sri balaji university pune, sri balaji sociaty pune , sbup notes , Sbup Notes , sbup notes .xyz, SBUP BCA Notes , SBUP BBA Notes ,sbup bba notes, sbup bca notes , SBUP MCA MBA BA Notes "
+    />
+    <meta name="auhor" content="Ved Mahajan" />
+    <title>Add Notes</title>
+    <style>
+      #for:hover {
+        color: blue;
+        cursor: pointer;
+      }
+      #frog {
+        cursor: pointer;
+        color: blue;
+      }
+
+      .fle {
+        display: flex;
+      }
+
+      @media screen and (max-width: 992px) {
+        .column {
+          flex: 50%;
+        }
+      }
+
+      /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .row {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="text-gray-600 body-font relative">
+      <div class="container px-5 py-24 mx-auto flex">
+        <div
+          class="bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md"
+        >
+          <h2 class="text-gray-900 text-2xl mb-1 font-medium title-font">
+            Cloud Infrastructure and Architecture Addmin Panal
+          </h2>
+          <!--  <p class="leading-relaxed mb-5 text-gray-600">Post-ironic portland shabby chic echo park, banjo fashion axe</p>   -->
+
+          <!--  Input boxes -->
+          <div class="relative mb-4">
+            <label for="nid" class="leading-7 text-l text-gray-800">
+              Enter Unique Id</label
+            >
+            <input
+              type="number"
+              id="nid"
+              name="nid"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+
+          <div class="relative mb-4">
+            <label for="chno" class="leading-7 text-l text-gray-800">
+              Chapter Number</label
+            >
+            <input
+              type="number"
+              id="chno"
+              name="chno"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+
+          <div class="relative mb-4">
+            <label for="chna" class="leading-7 text-l text-gray-800">
+              Chapter Name</label
+            >
+            <input
+              type="text"
+              id="chna"
+              name="chna"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+
+          <div class="relative mb-4">
+            <label for="des" class="leading-7 text-X text-gray-800"
+              >Description</label
+            >
+            <textarea
+              id="des"
+              name="des"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+            ></textarea>
+          </div>
+
+          <div class="relative mb-4">
+            <label for="link" class="leading-7 text-l text-gray-800">
+              Notes link</label
+            >
+            <input
+              type="text"
+              id="link"
+              name="link"
+              class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+            />
+          </div>
+
+          <!--   Button  type -->
+          <div class="btn">
+            <button
+              id="add"
+              class="bg-indigo-500 text-white mt-6 border-0 py-3 px-10 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            >
+              Add Notes
+            </button>
+            <button
+              id="ser"
+              class="bg-indigo-500 text-white mt-6 border-0 py-3 px-10 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            >
+              Search
+            </button>
+            <button
+              id="upd"
+              class="bg-indigo-500 text-white mt-6 border-0 py-3 px-10 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            >
+              Update
+            </button>
+            <button
+              id="del"
+              class="bg-indigo-500 text-white mt-6 border-0 py-3 px-10 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+            >
+              Delete
+            </button>
+          </div>
+          <p class="text-s text-indigo-800 mt-3">
+            *Plz Wait ...!! it Takes Few Seconds
+          </p>
+        </div>
+      </div>
+    </section>
+    <br /><br />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://kit.fontawesome.com/290d4f0eb4.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase/auth"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase/auth"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+      import {
+        getAuth,
+        createUserWithEmailAndPassword,
+        sendPasswordResetEmail,
+        sendEmailVerification,
+      } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+      import {
+        getDatabase,
+        set,
+        child,
+        ref,
+        get,
+        update,
+        remove,
+      } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCHPiWo28mcgmDwmSQ7OaDNKvLb3w6_DBc",
+        authDomain: "notes-user.firebaseapp.com",
+        projectId: "notes-user",
+        storageBucket: "notes-user.appspot.com",
+        messagingSenderId: "1065283327239",
+        appId: "1:1065283327239:web:f78f42e7832df43f65a1a2",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+
+      var nid = document.getElementById("nid");
+      var chno = document.getElementById("chno");
+      var chna = document.getElementById("chna");
+      var des = document.getElementById("des");
+      var ser = document.getElementById("ser");
+      var upd = document.getElementById("upd");
+      var del = document.getElementById("del");
+      var add = document.getElementById("add");
+
+      var submit = document.getElementById("submit");
+
+      const db = getDatabase(app);
+
+      //------- Adding notes to database --------//
+
+      add.addEventListener("click", (e) => {
+        var link = document.getElementById("link").value;
+
+        var vallink = `<a href="${link}"> <button> view notes</button></a>`;
+
+        if (nid.value === "" || null || 0) {
+          alert("Need to fill unique notes id");
+        } else if (chno.value === "" || null || 0) {
+          alert("Need to fill Chapter Number");
+        } else if (chna.value === "" || null || 0) {
+          alert("Need to fill Chapter Name");
+        } else if (des.value === "" || null || 0) {
+          alert("Need to fill Description of Notes");
+        } else if (link === "" || null || 0) {
+          alert("Need to Fill Link of Note");
+        } else {
+          a();
+        }
+
+        function a() {
+          set(ref(db, "sub/sub405/" + nid.value), {
+            notes_id: nid.value,
+            Ch_No: chno.value,
+            Ch_na: chna.value,
+            Des: des.value,
+            linkhtml: link,
+            link: vallink,
+          })
+            .then()(alert("Notes Added Succesfully .....!"))
+            .catch((error) => {
+              alert("error" + error);
+            });
+        }
+      });
+
+      //----------- Select Data ---------//
+      ser.addEventListener("click", (e) => {
+        const dbref = ref(db);
+
+        get(child(dbref, "sub/sub405/" + nid.value))
+          .then((snapshot) => {
+            if (snapshot.exists()) {
+              nid.value = snapshot.val().notes_id;
+              chno.value = snapshot.val().Ch_No;
+              chna.value = snapshot.val().Ch_na;
+              des.value = snapshot.val().Des;
+              link.value = snapshot.val().linkhtml;
+
+              alert("Notes Record Found succesfully...");
+            } else {
+              alert("No Notes Recode found with Note_Id ");
+            }
+          })
+          .catch((error) => {
+            alert("unsuccesfull" + error);
+          });
+      });
+
+      //---------- Update Notes ---------//
+
+      function updt() {
+        var link = document.getElementById("link").value;
+
+        var vallink = `<a href="${link}"> <button> view notes</button></a>`;
+        update(ref(db, "sub/sub405/" + nid.value), {
+          Ch_No: chno.value,
+          Ch_na: chna.value,
+          Des: des.value,
+          link: vallink,
+          linkhtml: link,
+        })
+          .then()(alert("Notes Update Succesfully .....!"))
+          .catch((error) => {
+            alert("error  : " + error);
+          });
+      }
+
+      upd.addEventListener("click", (e) => {
+        if (nid.value === "" || null || 0) {
+          alert("Need to fill unique notes id");
+        } else if (chno.value === "" || null || 0) {
+          alert("Need to fill Chapter Number");
+        } else if (chna.value === "" || null || 0) {
+          alert("Need to fill Chapter Name");
+        } else if (des.value === "" || null || 0) {
+          alert("Need to fill Description of Notes");
+        } else if (link.value === "" || null || 0) {
+          alert("Need to fill Link of Note");
+        } else {
+          updt();
+        }
+      });
+
+      //----------- Remove data --------//
+
+      function rem() {
+        remove(ref(db, "sub/sub405/" + nid.value), {
+          Ch_No: chno.value,
+          Ch_na: chna.value,
+          Des: des.value,
+          //link:vallink,
+          //linkhtml:link,
+        })
+          .then()(alert("Notes delete Succesfully .....!"))
+          .catch((error) => {
+            alert("error  : " + error);
+          });
+      }
+
+      del.addEventListener("click", (e) => {
+        if (nid.value === "" || null || 0) {
+          alert("plz Enter Unique notes id which you want to delete ");
+        } else {
+          rem();
+        }
+      });
+
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          const uid = user.uid;
+
+          // ...
+        } else {
+          location.replace("/log.html");
+        }
+      });
+    </script>
+  </body>
+</html>
